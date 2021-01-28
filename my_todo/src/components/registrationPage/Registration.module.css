@@ -1,0 +1,14 @@
+.divPadding{
+    padding: 10px;
+}
+
+.mainContainer{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    height: auto;
+    width:max-content;
+    background-color: greenyellow;
+    border-radius: 5px;
+}
