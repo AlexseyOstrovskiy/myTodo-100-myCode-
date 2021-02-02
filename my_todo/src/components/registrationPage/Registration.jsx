@@ -1,24 +1,28 @@
 import s from './Registration.module.css';
-import  {NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Registration = () => {
     return (
         <div className={s.mainContainer}>
             <div className={s.divPadding}>
-                <NavLink to='/inToPrivAcc'>Войти в приватный аккаунт</NavLink>
-                {/* <button>Войти в приватный аккаунт</button> */}
+                <NavLink to='/inToPrivAcc'>
+                    <button>Войти в приватный аккаунт</button>
+                </NavLink>
             </div>
             <div className={s.divPadding}>
-            <NavLink to='/inToPublicAcc'>Войти в публичный аккаунт</NavLink>
-                {/* <button>Войти в публичный аккаунт</button> */}
+                <NavLink to='/inToPublicAcc'>
+                    <button>Войти в публичный аккаунт</button>
+                </NavLink>
             </div>
             <div className={s.divPadding}>
-            <NavLink to='/createPrivAcc'>Создать приватный аккаунт</NavLink>
-                {/* <button>Создать приватный аккаунт</button> */}
+                <NavLink to='/createPrivAcc'>
+                    <button>Создать приватный аккаунт</button>
+                </NavLink>
             </div>
             <div className={s.divPadding}>
-            <NavLink to='/createPublicAcc'>Создать публичный аккаунт</NavLink>
-                {/* <button>Создать публичный аккаунт</button> */}
+                <NavLink to='/createPublicAcc'>
+                    <button>Создать публичный аккаунт</button>
+                </NavLink>
             </div>
         </div>
     )
