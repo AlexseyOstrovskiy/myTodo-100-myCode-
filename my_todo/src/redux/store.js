@@ -5,6 +5,7 @@ let store = {
         ],
         lastNameForPublicAcc: '',
         casesForPublicAcc:{
+
             nameForPublicAcc:'someNamePublicAccFortest',
             newCaseName:'newCaseName',
             priority:'high',
@@ -12,6 +13,7 @@ let store = {
             endCaseData:'endCaseData',
             placeCase:'placeCase',
             valueCase:'valueCase'
+            
         },
 
         
