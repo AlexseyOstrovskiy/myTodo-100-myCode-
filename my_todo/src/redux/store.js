@@ -4,6 +4,15 @@ let store = {
             {id: 1, nameForPublicAcc:'testName'}
         ],
         lastNameForPublicAcc: '',
+        casesForPublicAcc:{
+            nameForPublicAcc:'someNamePublicAccFortest',
+            newCaseName:'newCaseName',
+            priority:'high',
+            startCaseData:'startCaseData',
+            endCaseData:'endCaseData',
+            placeCase:'placeCase',
+            valueCase:'valueCase'
+        },
 
         
     },

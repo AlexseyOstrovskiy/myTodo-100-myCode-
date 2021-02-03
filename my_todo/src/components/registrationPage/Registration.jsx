@@ -6,22 +6,22 @@ const Registration = () => {
         <div className={s.mainContainer}>
             <div className={s.divPadding}>
                 <NavLink to='/inToPrivAcc'>
-                    <button>Войти в приватный аккаунт</button>
+                    <button className={s.coolButton}>Войти в приватный аккаунт</button>
                 </NavLink>
             </div>
             <div className={s.divPadding}>
                 <NavLink to='/inToPublicAcc'>
-                    <button>Войти в публичный аккаунт</button>
+                    <button className={s.coolButton}>Войти в публичный аккаунт</button>
                 </NavLink>
             </div>
             <div className={s.divPadding}>
                 <NavLink to='/createPrivAcc'>
-                    <button>Создать приватный аккаунт</button>
+                    <button className={s.coolButton}>Создать приватный аккаунт</button>
                 </NavLink>
             </div>
             <div className={s.divPadding}>
                 <NavLink to='/createPublicAcc'>
-                    <button>Создать публичный аккаунт</button>
+                    <button className={s.coolButton}>Создать публичный аккаунт</button>
                 </NavLink>
             </div>
         </div>
