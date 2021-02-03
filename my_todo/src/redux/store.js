@@ -55,11 +55,11 @@ export let getNameNewAcc =()=>{
    
 }
 
-export let addNewMyCaseFromState = (id,nameForPublicAcc,newCaseName,
+export let addNewMyCaseFromState = (nameForPublicAcc,newCaseName,
                                     priority,startCaseData,endCaseData,
                                     placeCase, valueCase   ) =>{
          let newMyCase={
-            idCases:id,    
+            idCases:store._state.casesForPublicAcc.indexOf.id +1,    
             nameForPublicAcc:nameForPublicAcc,
             newCaseName:newCaseName,
             priority:priority,

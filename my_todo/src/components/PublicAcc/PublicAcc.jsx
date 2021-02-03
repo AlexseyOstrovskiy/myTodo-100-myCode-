@@ -11,7 +11,10 @@ const PublicAcc = (props) => {
             <h1>
                 Публичный аккаунт - {props.getNameNewAcc()} !
          </h1>
-            <AddNewCaseForm />
+            <AddNewCaseForm 
+            getNameNewAcc = {props.getNameNewAcc}
+            addNewMyCaseFromState={props.addNewMyCaseFromState} 
+            />
             <NavLink to='/showexistingcase'>
                 <p>
                 <button>Просмотреть существующий список</button>
