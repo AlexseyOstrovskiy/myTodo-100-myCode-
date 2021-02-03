@@ -4,17 +4,38 @@ let store = {
             {id: 1, nameForPublicAcc:'testName'}
         ],
         lastNameForPublicAcc: '',
-        casesForPublicAcc:{
-
+        casesForPublicAcc:[
+            {
+            idCases:1,    
             nameForPublicAcc:'someNamePublicAccFortest',
             newCaseName:'newCaseName',
             priority:'high',
             startCaseData:'startCaseData',
             endCaseData:'endCaseData',
             placeCase:'placeCase',
-            valueCase:'valueCase'
-            
+            valueCase:'valueCase'     
         },
+        {
+            idCases:2,    
+            nameForPublicAcc:'someNamePublicAccFortest',
+            newCaseName:'newCaseName2',
+            priority:'high2',
+            startCaseData:'startCaseData2',
+            endCaseData:'endCaseData2',
+            placeCase:'placeCase2',
+            valueCase:'valueCase2'     
+        },
+        {
+            idCases:3,    
+            nameForPublicAcc:'someNamePublicAccFortest',
+            newCaseName:'newCaseName3',
+            priority:'high3',
+            startCaseData:'startCaseData3',
+            endCaseData:'endCaseData3',
+            placeCase:'placeCase3',
+            valueCase:'valueCase3'     
+        },
+    ]
 
         
     },
@@ -32,6 +53,23 @@ export let addNameForPublicAcc = (newName)=> {
 export let getNameNewAcc =()=>{
     return  store._state.lastNameForPublicAcc;
    
+}
+
+export let addNewMyCaseFromState = (id,nameForPublicAcc,newCaseName,
+                                    priority,startCaseData,endCaseData,
+                                    placeCase, valueCase   ) =>{
+         let newMyCase={
+            idCases:id,    
+            nameForPublicAcc:nameForPublicAcc,
+            newCaseName:newCaseName,
+            priority:priority,
+            startCaseData:startCaseData,
+            endCaseData:endCaseData,
+            placeCase:placeCase,
+            valueCase: valueCase    
+         } 
+         
+         store._state.casesForPublicAcc.push(newMyCase);
 }
 window.store = store;
 export default store;

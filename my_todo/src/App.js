@@ -23,7 +23,8 @@ function App(props) {
 
           <Route exact path='/newPublicAcc' render={() => <PublicAcc getNameNewAcc={props.getNameNewAcc} />} />
           {/* <Route  path ='/addnewcase' render =  {()=><AddNewCaseForm/> }/> */}
-          <Route path='/showexistingcase' render={() => <ShowExistingCase getNameNewAcc={props.getNameNewAcc}/>} />
+          <Route path='/showexistingcase' render={() => <ShowExistingCase getNameNewAcc={props.getNameNewAcc}
+          state = {props.store._state}/>} />
 
         </div>
       </div>
