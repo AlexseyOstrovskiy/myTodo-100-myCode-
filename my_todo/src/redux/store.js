@@ -6,7 +6,10 @@ let store = {
         lastNameForPublicAcc: '',
 
         casesForPublicAcc:{
-             'testName': [ 
+            
+                namePublicAcc:'',
+                namePublicAcc:{
+                taskForPublicAcc: [
             {
             idCases:1,    
             nameForPublicAcc:'someNamePublicAccFortest',
@@ -38,6 +41,8 @@ let store = {
             valueCase:'valueCase3'     
         },
     ],
+},
+   
     },
 
         
@@ -73,14 +78,13 @@ export let addNewMyCaseFromState = (nameForPublicAcc,newCaseName,
                                             placeCase:placeCase,
                                             valueCase: valueCase    
                                          } 
-if(store._state.casesForPublicAcc.nameForPublicAcc!==nameForPublicAcc){
-        let nameForPublicAcc = {};
-        store._state.casesForPublicAcc.push(nameForPublicAcc)
-        store._state.casesForPublicAcc.nameForPublicAcc.push(newMyCase);
+if(store._state.casesForPublicAcc.namePublicAcc!==nameForPublicAcc){
+        store._state.casesForPublicAcc.namePublicAcc.push(nameForPublicAcc)
+        store._state.casesForPublicAcc.namePublicAcc.taskForPublicAcc.push(newMyCase);
       
        }
        else{
-        store._state.casesForPublicAcc.nameForPublicAcc.push(newMyCase);
+        store._state.casesForPublicAcc.namePublicAcc.taskForPublicAcc.push(newMyCase);
        
        }
 }
