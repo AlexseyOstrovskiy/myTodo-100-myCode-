@@ -5,20 +5,44 @@ import StartDataItem  from '../ShowExistingCase/ItemsForShowExistingCase/StartDa
 import EndDataItem  from '../ShowExistingCase/ItemsForShowExistingCase/EndDataItem';
 import PlaceCaseItem  from '../ShowExistingCase/ItemsForShowExistingCase/PlaceCaseItem';
 import ValueCaseItem  from '../ShowExistingCase/ItemsForShowExistingCase/ValueCaseItem';
+import { NavLink } from 'react-router-dom';
 
 const  ShowExistingCase = (props) => {
+   
     let state = props.state;
-    
-    let caseNameElements = state.casesForPublicAcc.map((i) => <CaseNameItem  newCaseName={i.newCaseName} />);
-    let priorityElements = state.casesForPublicAcc.map((i) => <PriorityItem  priority={i.priority} />);
-    let startCaseDataElements = state.casesForPublicAcc.map((i) => <StartDataItem  startCaseData={i.startCaseData} />);
-    let endCaseDataElements = state.casesForPublicAcc.map((i) => <EndDataItem  endCaseData={i.endCaseData} />);
-    let placeCaseElements = state.casesForPublicAcc.map((i) => <PlaceCaseItem  placeCase={i.placeCase} />);
-    let valueCaseElements = state.casesForPublicAcc.map((i) => <ValueCaseItem  valueCase={i.valueCase} />);
+    let existingName = state.lastNameForPublicAcc;
+
+//     alert ("state.lastNameForPublicAcc;" + state.lastNameForPublicAcc);
+//    alert ("propsF" + props.getNameNewAcc());
+
+    let caseNameElements;
+    let priorityElements ;
+    let startCaseDataElements;
+    let endCaseDataElements;
+    let placeCaseElements;
+    let valueCaseElements;
+    // let d = state.casesForPublicAcc.lenght();
+    let d = state.casesForPublicAcc.length;
+    alert ('d = ' + d);
+    for(let i=0; i<d+1; i++)
+    {
+    if(existingName==state.casesForPublicAcc.nameForPublicAcc){
+    caseNameElements = state.casesForPublicAcc.map((i) => <CaseNameItem  newCaseName={i.newCaseName} />);
+    priorityElements = state.casesForPublicAcc.map((i) => <PriorityItem  priority={i.priority} />);
+    startCaseDataElements = state.casesForPublicAcc.map((i) => <StartDataItem  startCaseData={i.startCaseData} />);
+    endCaseDataElements = state.casesForPublicAcc.map((i) => <EndDataItem  endCaseData={i.endCaseData} />);
+    placeCaseElements = state.casesForPublicAcc.map((i) => <PlaceCaseItem  placeCase={i.placeCase} />);
+    valueCaseElements = state.casesForPublicAcc.map((i) => <ValueCaseItem  valueCase={i.valueCase} />);
+    }
+   
+}
     return (
         <div>
             <Navigation />
-         <h1> Список дел для списка  {props.getNameNewAcc()} </h1>
+         <h1> Список дел для списка  {existingName}
+             {/* {props.getNameNewAcc()} */}
+
+              </h1>
 
          <table border="1">
                 <tr>
@@ -39,7 +63,11 @@ const  ShowExistingCase = (props) => {
                 </tr>
             </table>
          
-        
+            <NavLink to='/newPublicAcc'>
+                <p>
+                <button>Назад</button>
+                </p>
+            </NavLink>
         </div>
     )
 }

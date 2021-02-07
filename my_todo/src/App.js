@@ -20,6 +20,7 @@ function App(props) {
           <Route exact path='/createPublicAcc' render={() => <CreatePublicAcc 
                 store={props.store}
                 addNameForPublicAcc={props.addNameForPublicAcc}
+                getNameNewAcc={props.getNameNewAcc}
           />} />
 
           <Route exact path='/newPublicAcc' render={() => <PublicAcc 
@@ -27,6 +28,8 @@ function App(props) {
                 addNewMyCaseFromState={props.addNewMyCaseFromState}/>} />
           <Route path='/showexistingcase' render={() => <ShowExistingCase getNameNewAcc={props.getNameNewAcc}
           state = {props.store._state}/>} />
+           
+         
 
         </div>
       </div>
