@@ -4,7 +4,9 @@ let store = {
             {id: 1, nameForPublicAcc:'testName'}
         ],
         lastNameForPublicAcc: '',
-        casesForPublicAcc:[
+
+        casesForPublicAcc:{
+             'testName': [ 
             {
             idCases:1,    
             nameForPublicAcc:'someNamePublicAccFortest',
@@ -35,7 +37,8 @@ let store = {
             placeCase:'placeCase3',
             valueCase:'valueCase3'     
         },
-    ]
+    ],
+    },
 
         
     },
@@ -58,18 +61,28 @@ export let getNameNewAcc =()=>{
 export let addNewMyCaseFromState = (nameForPublicAcc,newCaseName,
                                     priority,startCaseData,endCaseData,
                                     placeCase, valueCase   ) =>{
-         let newMyCase={
-            idCases:store._state.casesForPublicAcc.indexOf.id +1,    
-            nameForPublicAcc:nameForPublicAcc,
-            newCaseName:newCaseName,
-            priority:priority,
-            startCaseData:startCaseData,
-            endCaseData:endCaseData,
-            placeCase:placeCase,
-            valueCase: valueCase    
-         } 
-         
-         store._state.casesForPublicAcc.push(newMyCase);
+
+                                        let newMyCase={
+                                            // idCases:store._state.casesForPublicAcc.indexOf.id +1,
+                                            idCases:1,    
+                                            nameForPublicAcc:nameForPublicAcc,
+                                            newCaseName:newCaseName,
+                                            priority:priority,
+                                            startCaseData:startCaseData,
+                                            endCaseData:endCaseData,
+                                            placeCase:placeCase,
+                                            valueCase: valueCase    
+                                         } 
+if(store._state.casesForPublicAcc.nameForPublicAcc!==nameForPublicAcc){
+        let nameForPublicAcc = {};
+        store._state.casesForPublicAcc.push(nameForPublicAcc)
+        store._state.casesForPublicAcc.nameForPublicAcc.push(newMyCase);
+      
+       }
+       else{
+        store._state.casesForPublicAcc.nameForPublicAcc.push(newMyCase);
+       
+       }
 }
 window.store = store;
 export default store;

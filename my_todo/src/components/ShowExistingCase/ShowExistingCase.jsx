@@ -22,20 +22,20 @@ const  ShowExistingCase = (props) => {
     let placeCaseElements;
     let valueCaseElements;
     // let d = state.casesForPublicAcc.lenght();
-    let d = state.casesForPublicAcc.length;
-    alert ('d = ' + d);
-    for(let i=0; i<d+1; i++)
-    {
-    if(existingName==state.casesForPublicAcc.nameForPublicAcc){
-    caseNameElements = state.casesForPublicAcc.map((i) => <CaseNameItem  newCaseName={i.newCaseName} />);
-    priorityElements = state.casesForPublicAcc.map((i) => <PriorityItem  priority={i.priority} />);
-    startCaseDataElements = state.casesForPublicAcc.map((i) => <StartDataItem  startCaseData={i.startCaseData} />);
-    endCaseDataElements = state.casesForPublicAcc.map((i) => <EndDataItem  endCaseData={i.endCaseData} />);
-    placeCaseElements = state.casesForPublicAcc.map((i) => <PlaceCaseItem  placeCase={i.placeCase} />);
-    valueCaseElements = state.casesForPublicAcc.map((i) => <ValueCaseItem  valueCase={i.valueCase} />);
-    }
+    // let d = state.casesForPublicAcc.length;
+    // alert ('d = ' + d);
+    // for(let i=0; i<d+1; i++)
+    // {
+    // if(existingName==state.casesForPublicAcc.nameForPublicAcc){
+    caseNameElements = state.casesForPublicAcc.existingName.map((i) => <CaseNameItem  newCaseName={i.newCaseName} />);
+    priorityElements = state.casesForPublicAcc.existingName.map((i) => <PriorityItem  priority={i.priority} />);
+    startCaseDataElements = state.casesForPublicAcc.existingName.map((i) => <StartDataItem  startCaseData={i.startCaseData} />);
+    endCaseDataElements = state.casesForPublicAcc.existingName.map((i) => <EndDataItem  endCaseData={i.endCaseData} />);
+    placeCaseElements = state.casesForPublicAcc.existingName.map((i) => <PlaceCaseItem  placeCase={i.placeCase} />);
+    valueCaseElements = state.casesForPublicAcc.existingName.map((i) => <ValueCaseItem  valueCase={i.valueCase} />);
+    // }
    
-}
+// }
     return (
         <div>
             <Navigation />
